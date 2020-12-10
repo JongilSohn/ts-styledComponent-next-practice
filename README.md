@@ -13,4 +13,4 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 4. Next js의 _app.tsx 이해
 5. Next js의 _document.tsx 이해
 6. Styled-components 적용 
-( !새로고침시 styled-components 사라지는 이슈 해결! --> _document.tsx 참고! 
+( !새로고침시 styled-components 사라지는 이슈 해결! --> ServerStyleSheet를 사용하여 해결 (_document.tsx 참고!)
