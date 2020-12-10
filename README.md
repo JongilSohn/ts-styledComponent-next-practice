@@ -1,30 +1,16 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+## creat-next-app 을 사용하여 TypeScript, Styled-components, Next js
 
-First, run the development server:
+1. create-next-app을 사용한 프로젝트 생성
+2. TypeScript 각 라이브러리 install
+3. Styled-components install
 
-```bash
-npm run dev
-# or
-yarn dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+각 라이브러리 프레임워크를 사용하여
+1. SSR 이해
+2. CSR 이해
+3. Next js의 기본 동작 이해
+4. Next js의 _app.tsx 이해
+5. Next js의 _document.tsx 이해
+6. Styled-components 적용 
+( !새로고침시 날라가는 이슈 해결! --> _document.tsx 참고! 
