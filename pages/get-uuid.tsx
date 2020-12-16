@@ -8,7 +8,8 @@ const Center = styled.div`
   justify-content: center;
 `;
 
-function GetUuid() {
+function GetUuid(props) {
+  console.log("render")
   const [uuid, setUuid] = useState('');
 
   const  getData = async () => { 
@@ -22,15 +23,17 @@ function GetUuid() {
 
   // 그렇기때문에 서버사이드 렌더링에 반영이 되어야 하는 내용인지,
   // 안되어도 되는 내용인지 판단하고 구현해야한다.
-  useEffect(() => {
-    getData()
-  },[])
+  // useEffect(() => {
+  //   getData()
+  // },[])
 
+  console.log(props.debug)
 
   return (
     <>
       <Center>
-        {uuid}
+        <h1>{props.label} :   </h1>
+        <h1>{props.uuid}</h1>
       </Center>
       <Center>
         <Link href="/">
@@ -41,6 +44,21 @@ function GetUuid() {
       </Center>
     </>
   )
+}
+
+// getInitialProps
+
+// SSR을 할 때, 데이터를 미리 받아서 끼운 상태로 마운트 되게 하려면
+// getInitialProps를 이용하여 props로 받아 데이터받은 후 SSR시킬 수 있다.
+
+// 즉 getInitialProps에서 동작한 함수는 서버와 클라이언트에서 둘 다 동작한다.
+GetUuid.getInitialProps = async function() {
+  console.log("getInitialProps")
+  const result = await axios.get('http://localhost:3000' + '/api/uuid/')
+  return {
+    label: "UUID",
+    uuid: result.data.uuid
+  }
 }
 
 export default GetUuid;
