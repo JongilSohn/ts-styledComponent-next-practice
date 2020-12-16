@@ -26,6 +26,13 @@ function Layout ({children}) {
               </li>
             </a>
           </Link>
+          <Link href="/get-uuid">
+            <a>
+              <li>
+                GET-UUID
+              </li>
+            </a>
+          </Link>
         </ul>
       </Header>
       {children}
