@@ -52,6 +52,8 @@ function GetUuid(props) {
 // getInitialProps를 이용하여 props로 받아 데이터받은 후 SSR시킬 수 있다.
 
 // 즉 getInitialProps에서 동작한 함수는 서버와 클라이언트에서 둘 다 동작한다.
+// 또한 pages 아래에서만 getInitialProps 동작 가능하다.
+// 즉 페이지스에서 데이터를 받아서 props로 컴포넌츠 폴더로 넘겨주는 식이 되어야한다.
 GetUuid.getInitialProps = async function() {
   console.log("getInitialProps")
   const result = await axios.get('http://localhost:3000' + '/api/uuid/')
