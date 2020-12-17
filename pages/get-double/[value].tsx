@@ -7,7 +7,7 @@ function GetDouble(props) {
     <div>
       <div>
         {props.value}
-      </div>
+      </div> 
       <div>
 {/* 
         Link는 돔으로써 href 속성으로 이동하게 되는 컴포넌트이데
